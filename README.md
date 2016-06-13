@@ -34,7 +34,7 @@ select.mtd.noc(target, dlt, dose.level, ndose, epi, lambda)
 
 
 #Example
-We apply the fNOC design to the sonidegib trial.
+We apply the NOC and fNOC designs to the sonidegib trial.
 * Based on the accumulated data, two DLTs were observed at dose level 3 when patient 13 arrived on day 130. At this moment, patients 6, 8, 9, 11, and 12 were still under the follow-up of evaluation without experiencing any DLT, which led to a total of five missing toxicity outcomes. We utilize the following code to decide the dose level for patient 13.
 ```rscript
 target <- 0.33
