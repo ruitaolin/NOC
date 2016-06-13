@@ -8,12 +8,12 @@
 #     get.next.fnoc: generate next dose level for late-onset cases       #
 #                                                                        #
 #                             ---Input---                                #
-#             target --> target toxicity probability	                     #
+#             target --> target toxicity probability	                 #
 #             enter.time --> days of arrival for each patient            #
-#             dlt.time  -->  time to dlt for each patient				 #
+#             dlt.time  -->  time to dlt for each patient                #
 #                            0 indicates no dlt                          #
-#             current.time --> day of arrival for the the patient		 #
-#             tau --> length of follow-up period             			 #
+#             current.time --> day of arrival for the the patient        #
+#             tau --> length of follow-up period                         #
 #             dose.level --> dose level for each patient                 #
 #             ndose --> number of dose levels                            #
 #             epi --> a small number that defines the neighbour of target#
@@ -21,7 +21,7 @@
 #             eta --> dose-switching cutoff                              #
 #             lambda --> dose-elimination cutoff                         #
 #                                                                        #
-#                             ---Output---								 #
+#                             ---Output---                               #
 #            * posterior model probabilities                             #
 #            * posterior probability that the current dose is too toxic  #
 #            * next dose recommendation                                  #
