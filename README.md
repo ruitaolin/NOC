@@ -68,6 +68,36 @@ The next dose level is 2
 [11,]          11          3            100            0          91      0.1428571
 [12,]          12          3            118            0          91      0.2207792
 ```
+* On the other hand, if we had treat these missing data as no DLTs, we can utilize ```get.next.noc``` function to generate the next dose level, as given by
+```rscript 
+target <- 0.33
+ndose <- 5
+dlt <- c(0,0,0,0,0,0,1,0,0,1,0,0)
+dose.level <- c(1,1,1,2,2,2,3,3,3,3,3,3)
+get.next.noc(target, dlt, dose.level, ndose)
+
+-----------------------output------------------------
+The feasibility bound for overdose control rule is 0.35 
+The dose-switching cutoff is 0.6 
+The dose-elimination cutoff is 0.85 
+The posterior model probabilities are 0.01 0.08 0.49 0.28 0.14 
+The posterior probability that the current dose level is overly toxic is 0.3341323 
+The next dose level is 3 
+      Patient No. Dose level DLT
+ [1,]           1          1   0
+ [2,]           2          1   0
+ [3,]           3          1   0
+ [4,]           4          2   0
+ [5,]           5          2   0
+ [6,]           6          2   0
+ [7,]           7          3   1
+ [8,]           8          3   0
+ [9,]           9          3   0
+[10,]          10          3   1
+[11,]          11          3   0
+[12,]          12          3   0
+```
+
 #Authors and Reference
 * Ruitao Lin and Guosheng Yin (gyin@hku.hk)
 * Lin, R. and Yin, G. (2016) “Nonparametric overdose control with late-onset toxicity in phase I clinical trials”
