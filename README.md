@@ -8,12 +8,15 @@ The repository includes three functions:
 ```rscript
 get.next.noc(target, dlt, dose.level, ndose, epi, a, eta, lambda)
 ```
-* fNOCnext.R: The R code that include the function ```get.next.fnoc``` to select the next dose level for the new patents by the fNOC design when the toxicity outcome is late-onset.
+* fNOCnext.R: The R code that includes the function ```get.next.fnoc``` to select the next dose level for the new patents by the fNOC design when the toxicity outcome is late-onset.
 ```rscipt
 get.next.fnoc(target, enter.time, dlt.time, current.time, tau, dose.level, ndose, epi, a, eta, lambda)
 ```
-* NOCmtd.R: The R code to estimate the MTD level at the end of the trial.
-* 
+* NOCmtd.R: The R code that includes the function ```select.mtd.noc``` to estimate the MTD level at the end of the trial.
+```rscript
+select.mtd.noc <- function(target, dlt, dose.level, ndose, epi, lambda)
+```
+
 
 #Inputs
 * ```target```: The target toxicity probability, e.g., ```target=0.33```.
