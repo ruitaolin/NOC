@@ -7,6 +7,7 @@ The repository includes three functions:
 * NOCnext.R: The R code to select the next dose level for the new patients by the NOC design.
 * fNOCnext.R: The R code to select the next dose level for the new patents by the fNOC design when the toxicity outcome is late-onset.
 * NOCmtd.R: The R code to estimate the MTD level at the end of the trial.
+
 #Authors and Reference
 * Ruitao Lin and Guosheng Yin (gyin@hku.hk)
 * Lin, R. and Yin, G. (2016) “Nonparametric overdose control with late-onset toxicity in phase I clinical trials”
