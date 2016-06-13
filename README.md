@@ -97,7 +97,18 @@ The next dose level is 3
 [11,]          11          3   0
 [12,]          12          3   0
 ```
+* In the end, three dose levels had been explored with four DLTs out of 18 patients at dose level 2 and four DLTs out of 9 patients at dose level 3 being observed. The MTD can be estimated by the ```select.mtd.noc``` function. 
+```rscript 
+target <- 0.33
+ndose <- 5
+dlt <- c(0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,1,0,0,1,1,1,1,0,1,0,0,0,1,0)
+dose.level <- c(1,1,1,2,2,2,3,3,3,3,3,3,2,2,2,2,2,2,3,3,3,2,2,2,2,2,2,2,2,2)
+select.mtd.noc(target, dlt, dose.level, ndose)
 
+-----------------------output------------------------
+The posterior model probabilities are 0.03 0.55 0.36 0.05 0.01 
+The MTD is the dose level 2 
+```
 #Authors and Reference
 * Ruitao Lin and Guosheng Yin (gyin@hku.hk)
 * Lin, R. and Yin, G. (2016) “Nonparametric overdose control with late-onset toxicity in phase I clinical trials”
