@@ -13,7 +13,8 @@ get.next.noc(target, dlt, dose.level, ndose, epi, a, eta, lambda)
 get.next.fnoc(target, enter.time, dlt.time, current.time, tau, dose.level, ndose, epi, a, eta, lambda)
 ```
 * NOCmtd.R: The R code to estimate the MTD level at the end of the trial.
-
+#Inputs
+* ```target```: The target toxicity probability, e.g., ```target=0.33```.
 #Authors and Reference
 * Ruitao Lin and Guosheng Yin (gyin@hku.hk)
 * Lin, R. and Yin, G. (2016) “Nonparametric overdose control with late-onset toxicity in phase I clinical trials”
