@@ -27,7 +27,11 @@ select.mtd.noc(target, dlt, dose.level, ndose, epi, lambda)
 * ```a```: The feasibility bound for overdose control, as default, ```a<-0.35```. 
 * ```eta```: The dose-switching cutoff, as default, ```eta<-0.50```.
 * ```lambda```: The dose-elimination cutoff, as default, ```lambda<-0.85```.
-* 
+* ```enter.time```: A vector of length *n* that stores the day of arrival of each patient under late-onset cases.
+* ```dlt.time```: A vector of length *n* that stores the time-to-toxicity outcome of each patients; If the subject has not experienced the DLT by the decision-making time, his time-to-toxcity outcome is *0*.
+* ```current.time```: The arrival time of the new patient, or the decision-making time to decide the next dose level.
+* ```tau```: The length of follow-up period.
+
 
 #Example
 asd
