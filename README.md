@@ -20,8 +20,17 @@ select.mtd.noc(target, dlt, dose.level, ndose, epi, lambda)
 
 #Inputs
 * ```target```: The target toxicity probability, e.g., ```target<-0.33```.
-* ```dlt```: A vector of length *n* that stroes the toxicity outcome for each patient, where 
+* ```dlt```: A vector of length *n* that stores the toxicity outcome for each patient, where *n* is the total number of patients so far.
+* ```dose.level```: A vector of length *n* that stores the dose level assigned to each patient.
+* ```ndose```: Number of prespecified dose levels of the new drug.
+* ```epi```: A small positive value that defines the neighbourhood of the target toxicity probability.
+* ```a```: The feasibility bound for overdose control, as default, ```a<-0.35```. 
+* ```eta```: The dose-switching cutoff, as default, ```eta<-0.50```.
+* ```lambda```: The dose-elimination cutoff, as default, ```lambda<-0.85```.
+* 
 
+#Example
+asd
 #Authors and Reference
 * Ruitao Lin and Guosheng Yin (gyin@hku.hk)
 * Lin, R. and Yin, G. (2016) “Nonparametric overdose control with late-onset toxicity in phase I clinical trials”
