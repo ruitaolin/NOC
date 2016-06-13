@@ -35,8 +35,39 @@ select.mtd.noc(target, dlt, dose.level, ndose, epi, lambda)
 
 #Example
 We apply the fNOC design to the sonidegib trial.
-* Based on the accumulated data, two DLTs were observed at dose level 3 when patient 13 arrived on day 130. At this moment, patients 6, 8, 9, 11, and 12 were still under the follow-up of evaluation without experiencing any DLT, which led to a total of five missing toxicity outcomes.
-
+* Based on the accumulated data, two DLTs were observed at dose level 3 when patient 13 arrived on day 130. At this moment, patients 6, 8, 9, 11, and 12 were still under the follow-up of evaluation without experiencing any DLT, which led to a total of five missing toxicity outcomes. We utilize the following code to decide the dose level for patient 13.
+```rscript
+target <- 0.33
+ndose <- 5
+enter.time <- c(4,7,19,29,31,50,58,67,78,91,100,118)
+dlt.time <- c(0,0,0,0,0,0,65,0,0,29,0,0)
+dose.level <- c(1,1,1,2,2,2,3,3,3,3,3,3)
+tau <- 90
+current.time <- 130
+get.next.fnoc(target, enter.time, dlt.time, current.time,tau, dose.level, ndose)
+```
+The output is given by 
+```rscript
+The feasibility bound for overdose control rule is 0.35 
+The dose-switching cutoff is 0.6 
+The dose-elimination cutoff is 0.85 
+The posterior model probabilities are 0.02 0.16 0.55 0.2 0.07 
+The posterior probability that the current dose level is overly toxic is 0.4749329 
+The next dose level is 2 
+      Patient No. Dose level Day of arrival Observed DLT Time to DLT Fractional DLT
+ [1,]           1          1              4            0          91      0.0000000
+ [2,]           2          1              7            0          91      0.0000000
+ [3,]           3          1             19            0          91      0.0000000
+ [4,]           4          2             29            0          91      0.0000000
+ [5,]           5          2             31            0          91      0.0000000
+ [6,]           6          2             50            0          91      0.0000000
+ [7,]           7          3             58            1          65      1.0000000
+ [8,]           8          3             67            0          91      0.1428571
+ [9,]           9          3             78            0          91      0.1428571
+[10,]          10          3             91            1          29      1.0000000
+[11,]          11          3            100            0          91      0.1428571
+[12,]          12          3            118            0          91      0.2207792
+```
 #Authors and Reference
 * Ruitao Lin and Guosheng Yin (gyin@hku.hk)
 * Lin, R. and Yin, G. (2016) “Nonparametric overdose control with late-onset toxicity in phase I clinical trials”
