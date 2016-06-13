@@ -5,6 +5,9 @@ The primary objective of phase I oncology trials is to identify the maximum tole
 #Functions
 The repository includes three functions:
 * NOCnext.R: The R code to select the next dose level for the new patients by the NOC design.
+```Rscript
+hello
+```
 * fNOCnext.R: The R code to select the next dose level for the new patents by the fNOC design when the toxicity outcome is late-onset.
 * NOCmtd.R: The R code to estimate the MTD level at the end of the trial.
 
