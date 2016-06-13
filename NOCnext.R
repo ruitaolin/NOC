@@ -8,16 +8,16 @@
 #     get.next.noc: generate next dose level for conventional cases      #
 #                                                                        #
 #                             ---Input---                                #
-#             target --> target toxicity probability					     #
-#             dlt -->  toxicity outcome for each patient  				 #
-#             dose.level --> dose level for each patient        		     #
+#             target --> target toxicity probability                     #
+#             dlt -->  toxicity outcome for each patient                 #
+#             dose.level --> dose level for each patient                 #
 #             ndose --> number of dose levels                            #
 #             epi --> a small number that defines the neighbour of target#
 #             a --> feasibility bound for overdose control               #
 #             eta --> dose-switching cutoff                              #
 #             lambda --> dose-elimination cutoff                         #
 #                                                                        #
-#                             ---Output---								 #
+#                             ---Output---                               #
 #            * posterior model probabilities                             #
 #            * posterior probability that the current dose is too toxic  #
 #            * next dose recommendation                                  #
