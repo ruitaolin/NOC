@@ -34,7 +34,9 @@ select.mtd.noc(target, dlt, dose.level, ndose, epi, lambda)
 
 
 #Example
-asd
+We apply the fNOC design to the sonidegib trial.
+* Based on the accumulated data, two DLTs were observed at dose level 3 when patient 13 arrived on day 130. At this moment, patients 6, 8, 9, 11, and 12 were still under the follow-up of evaluation without experiencing any DLT, which led to a total of five missing toxicity outcomes.
+
 #Authors and Reference
 * Ruitao Lin and Guosheng Yin (gyin@hku.hk)
 * Lin, R. and Yin, G. (2016) “Nonparametric overdose control with late-onset toxicity in phase I clinical trials”
