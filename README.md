@@ -19,11 +19,8 @@ select.mtd.noc(target, dlt, dose.level, ndose, epi, lambda)
 
 
 #Inputs
-* ```target```: The target toxicity probability, e.g., 
-```rscript 
-target<-0.33
-```
-* 
+* ```target```: The target toxicity probability, e.g., ```target<-0.33```.
+* ```dlt```: A vector of length $n$ that stroes the toxicity outcome for each patient, where 
 
 #Authors and Reference
 * Ruitao Lin and Guosheng Yin (gyin@hku.hk)
