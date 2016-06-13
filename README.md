@@ -25,10 +25,10 @@ select.mtd.noc(target, dlt, dose.level, ndose, epi, lambda)
 * ```ndose```: Number of prespecified dose levels of the new drug.
 * ```epi```: A small positive value that defines the neighbourhood of the target toxicity probability.
 * ```a```: The feasibility bound for overdose control, as default, ```a<-0.35```. 
-* ```eta```: The dose-switching cutoff, as default, ```eta<-0.50```.
+* ```eta```: The dose-switching cutoff, as default, ```eta<-0.60```.
 * ```lambda```: The dose-elimination cutoff, as default, ```lambda<-0.85```.
 * ```enter.time```: A vector of length *n* that stores the day of arrival of each patient under late-onset cases.
-* ```dlt.time```: A vector of length *n* that stores the time-to-toxicity outcome of each patients; If the subject has not experienced the DLT by the decision-making time, his time-to-toxcity outcome is *0*.
+* ```dlt.time```: A vector of length *n* that stores the time-to-toxicity outcome of each patient; If the subject has not experienced the DLT by the decision-making time, his time-to-toxcity outcome is *0*.
 * ```current.time```: The arrival time of the new patient, or the decision-making time to decide the next dose level.
 * ```tau```: The length of follow-up period.
 
@@ -68,7 +68,7 @@ The next dose level is 2
 [11,]          11          3            100            0          91      0.1428571
 [12,]          12          3            118            0          91      0.2207792
 ```
-* On the other hand, if we had treat these missing data as no DLTs, we can utilize ```get.next.noc``` function to generate the next dose level, as given by
+* On the other hand, if we had treated these missing data as no DLTs, we can utilize the ```get.next.noc``` function to generate the next dose level, as given by
 ```rscript 
 target <- 0.33
 ndose <- 5
@@ -111,5 +111,5 @@ The MTD is the dose level 2
 ```
 #Authors and Reference
 * Ruitao Lin and Guosheng Yin (gyin@hku.hk)
-* Lin, R. and Yin, G. (2016) “Nonparametric overdose control with late-onset toxicity in phase I clinical trials”
+* Lin, R. and Yin, G. (2016) “Nonparametric overdose control with late-onset toxicity in phase I clinical trials”, in Biostatistics.
 
