@@ -14,12 +14,12 @@ get.next.fnoc(target, enter.time, dlt.time, current.time, tau, dose.level, ndose
 ```
 * NOCmtd.R: The R code that includes the function ```select.mtd.noc``` to estimate the MTD level at the end of the trial.
 ```rscript
-select.mtd.noc <- function(target, dlt, dose.level, ndose, epi, lambda)
+select.mtd.noc(target, dlt, dose.level, ndose, epi, lambda)
 ```
 
 
 #Inputs
-* ```target```: The target toxicity probability, e.g., ```target=0.33```.
+* ```target```: The target toxicity probability, e.g., ```rscript target <- 0.33```.
 * 
 
 #Authors and Reference
