@@ -77,16 +77,12 @@ for (i in 1:ndose){
 					if (elimi[1]==1) {stop("The trial should be terminated early"); }
 			}			
 			pos.model<-pos.model[1:ndose];
-
 			pos.model=pos.model/sum(pos.model)
+		        cat("The posterior model probabilities are", pos.model, "\n")			
 			pos.model[elimi==1]=0;
 			d_opt<-which.max(pos.model)
-
-		
-		pos.model<-round(pos.model,2)
-		cat("The posterior model probabilities are", pos.model, "\n")
-		cat("The MTD is the dose level", d_opt, "\n")
-
+             		pos.model<-round(pos.model,2)
+		        cat("The recommended MTD is the dose level", d_opt, "\n")
 }
 
 
