@@ -73,7 +73,7 @@ for (i in 1:ndose){
         assesstime = enter.time+tau;	
         dlt.time[dlt.time==0]= tau+1;
         yo = (dlt.time<=tau)*(assesstime<=current.time)+(dlt.time<=(current.time+tau-assesstime))*(current.time<assesstime);		
-		if (sum(yo)==0)	{stop("Must observe at least one DLT")}
+		if (sum(yo)==0)	{stop("fNOC takes effect when at least one DLT has been observed")}
 	    if (sum(yo)!=0){			
 			
 			otime = yo*dlt.time+(1-yo)*((current.time+tau-assesstime)*(current.time<assesstime)+tau*(assesstime<=current.time))			
