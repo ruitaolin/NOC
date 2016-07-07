@@ -108,6 +108,7 @@ for (i in 1:ndose){
 
 
 # generate the next dose level after the 4th in the sonidegib trial
+# by treating the missing data as no toxicity.
 target = 0.33
 ndose = 5
 dlt= c(0,0,0,0,0,0,1,0,0,1,0,0)
