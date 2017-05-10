@@ -111,5 +111,5 @@ The MTD is the dose level 2
 ```
 #Authors and Reference
 * Ruitao Lin and Guosheng Yin (gyin@hku.hk)
-* Lin, R. and Yin, G. (2016) “Nonparametric overdose control with late-onset toxicity in phase I clinical trials”, in Biostatistics.
+* Lin, R. and Yin, G. (2017) “Nonparametric overdose control with late-onset toxicity in phase I clinical trials”, Biostatistics, 18: 180-194.
 
