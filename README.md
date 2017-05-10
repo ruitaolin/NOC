@@ -109,7 +109,7 @@ select.mtd.noc(target, dlt, dose.level, ndose)
 The posterior model probabilities are 0.03 0.55 0.36 0.05 0.01 
 The MTD is the dose level 2 
 ```
-#Authors and Reference
+# Authors and Reference
 * Ruitao Lin and Guosheng Yin (gyin@hku.hk)
 * Lin, R. and Yin, G. (2017) “Nonparametric overdose control with late-onset toxicity in phase I clinical trials”, Biostatistics, 18: 180-194.
 
